@@ -312,11 +312,11 @@ namespace GameLibrary.Game
                     RPCoins += value;
                     MazeScene.instance.Client.MyCharacter.CoinCount = RPCoins;
                 }
-                else if (MazeScene.instance.Client.EnemyCharacter.CoinCount != BPCoins)
+                else if (MazeScene.instance.Client.EnemyCharacter.CoinCount != RPCoins)
                 {
-                    BPCoins = MazeScene.instance.Client.EnemyCharacter.CoinCount;
-                    BPCoins += value;
-                    MazeScene.instance.Client.EnemyCharacter.CoinCount = BPCoins;
+                    RPCoins = MazeScene.instance.Client.EnemyCharacter.CoinCount;
+                    RPCoins += value;
+                    MazeScene.instance.Client.EnemyCharacter.CoinCount = RPCoins;
                 }
 
                 GameEvents.ChangeCoins?.Invoke(tag, value);
@@ -328,11 +328,11 @@ namespace GameLibrary.Game
                     BPCoins += value;
                     MazeScene.instance.Client.MyCharacter.CoinCount = BPCoins;
                 }
-                else if (MazeScene.instance.Client.EnemyCharacter.CoinCount != RPCoins)
+                else if (MazeScene.instance.Client.EnemyCharacter.CoinCount != BPCoins)
                 {
-                    RPCoins = MazeScene.instance.Client.EnemyCharacter.CoinCount;
-                    RPCoins += value;
-                    MazeScene.instance.Client.EnemyCharacter.CoinCount = RPCoins;
+                    BPCoins = MazeScene.instance.Client.EnemyCharacter.CoinCount;
+                    BPCoins += value;
+                    MazeScene.instance.Client.EnemyCharacter.CoinCount = BPCoins;
                 }
                 //BPCoins += value;
                 GameEvents.ChangeCoins?.Invoke(tag, value);
