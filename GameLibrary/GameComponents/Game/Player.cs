@@ -69,6 +69,7 @@ namespace GameLibrary.Game
                 if (MazeScene.instance.PlayerId == "2")
                 {
                     GameEvents.ChangeHealth?.Invoke(gameObject.GameObjectTag, MazeScene.instance.Client.EnemyCharacter.HealthCount);
+                    BPCoins = MazeScene.instance.Client.EnemyCharacter.CoinCount;
                 }
 
                 GameEvents.ChangeHealth?.Invoke(gameObject.GameObjectTag, Property.Health);
@@ -91,6 +92,7 @@ namespace GameLibrary.Game
                 if (MazeScene.instance.PlayerId == "1")
                 {
                     GameEvents.ChangeHealth?.Invoke(gameObject.GameObjectTag, MazeScene.instance.Client.EnemyCharacter.HealthCount);
+                    RPCoins = MazeScene.instance.Client.EnemyCharacter.CoinCount;
                 }
 
                 GameEvents.ChangeHealth?.Invoke(gameObject.GameObjectTag, Property.Health);
@@ -312,9 +314,9 @@ namespace GameLibrary.Game
                 }
                 else if (MazeScene.instance.Client.EnemyCharacter.CoinCount != RPCoins)
                 {
-                    RPCoins = MazeScene.instance.Client.EnemyCharacter.CoinCount;
-                    RPCoins += value;
-                    MazeScene.instance.Client.EnemyCharacter.CoinCount = RPCoins;
+                    BPCoins = MazeScene.instance.Client.EnemyCharacter.CoinCount;
+                    BPCoins += value;
+                    MazeScene.instance.Client.EnemyCharacter.CoinCount = BPCoins;
                 }
 
                 GameEvents.ChangeCoins?.Invoke(tag, value);
@@ -323,8 +325,8 @@ namespace GameLibrary.Game
             {
                 if (playerId == "1")
                 {
-                    RPCoins += value;
-                    MazeScene.instance.Client.MyCharacter.CoinCount = RPCoins;
+                    BPCoins += value;
+                    MazeScene.instance.Client.MyCharacter.CoinCount = BPCoins;
                 }
                 else if (MazeScene.instance.Client.EnemyCharacter.CoinCount != RPCoins)
                 {
