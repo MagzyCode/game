@@ -73,7 +73,10 @@ namespace NetworkLib
                 int bytes = socket.Receive(data);
                 string message = Encoding.Unicode.GetString(data, 0, bytes);
 
-                Notify?.Invoke(message);
+                if (bytes == 22)
+                {
+                    Notify?.Invoke(message);
+                }
             }
             catch (Exception ex)
             {
@@ -98,7 +101,7 @@ namespace NetworkLib
                 byte[] data = new byte[1024 * 8]; // получаем данные
                 int bytes = socket.Receive(data); // получаем данные
                  
-                if (bytes >= 20) 
+                if (bytes == 22) 
                 {
                     EnemyCharacter.PlayerPosition = new float[] { BitConverter.ToSingle(data, 0), BitConverter.ToSingle(data, 4) };
                     EnemyCharacter.BulletCount = BitConverter.ToInt32(data, 8);
