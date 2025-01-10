@@ -59,7 +59,6 @@ namespace NetworkLib
                 ReceiveData();
                 Thread.Sleep(100);
                 RunGameLogic();
-                ReceiveData();
             }
             catch (Exception ex)
             {
