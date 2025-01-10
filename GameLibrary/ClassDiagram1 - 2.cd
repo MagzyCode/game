@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="GameLibrary.Game.DecoratorProperty">
+    <Position X="6.75" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACAACAAAEAAAAAIAAAAAQAABAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\DecoratorProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.PowerDecorator">
+    <Position X="0.75" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\PowerDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.ReloadTimeDecorator">
+    <Position X="7" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\ReloadTimeDecoratorcs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.SpeedDecorator">
+    <Position X="3.75" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\SpeedDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.PlayerProperitiesStandart">
+    <Position X="1.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACAACAAAAAAAAAIAAAAAQAABAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Game\PlayerProperitiesStandart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.PlayerProperities">
+    <Position X="4" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACQACAAAAAAAARIAAAAAQAABAAEBAAABAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Game\PlayerProperities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

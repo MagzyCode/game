@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EngineLibrary.EngineComponents.Input" Collapsed="true">
+    <Position X="6" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAIAAAAAAAAAAAAQAAAAEAAAAAAAA=</HashCode>
+      <FileName>Engine\Input.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EngineLibrary.ObjectComponents.ColliderComponent" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAQAAAAAAAAAAEAAAAAICAAIAAAEAAgIAAIIAAgA=</HashCode>
+      <FileName>Components\ColliderComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EngineLibrary.ObjectComponents.SpriteComponent" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAABAAAAAAAgAAAAAAAAgEAAABAAAIAAgCAA=</HashCode>
+      <FileName>Components\SpriteComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EngineLibrary.ObjectComponents.TransformComponent" Collapsed="true">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACACgAAAAACAAAoAAIAYAACAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Components\TransformComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EngineLibrary.EngineComponents.Time" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAABQABAAAAAAAAAAAAAAAAAAAEgAAAAAA=</HashCode>
+      <FileName>Engine\Time.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EngineLibrary.ObjectComponents.GameObject" Collapsed="true">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAgAgAAEAgAAAQAAQABgAAQCAAAAAAgAAA=</HashCode>
+      <FileName>Objects\GameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EngineLibrary.ObjectComponents.Animation" Collapsed="true">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAIAAAAAAAAgAAAAAAAABAAAAAAAAgQCAIAA=</HashCode>
+      <FileName>Objects\Animation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EngineLibrary.ObjectComponents.ObjectScript" Collapsed="true">
+    <Position X="4.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAQAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Objects\ObjectScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EngineLibrary.EngineComponents.RenderingApplication" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACAgAAIACQQAAIAAAAAAABAAAACAAAAAAII=</HashCode>
+      <FileName>Rendering\RenderingApplication.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EngineLibrary.EngineComponents.RenderingSystem" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAgAgAAIAAAAAQgAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Rendering\RenderingSystem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EngineLibrary.EngineComponents.InputHandler" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIIACACAAAAAAAAAAAAAAAAAAEAAAAAAAIAEAE=</HashCode>
+      <FileName>Engine\InputHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EngineLibrary.EngineComponents.Scene" Collapsed="true">
+    <Position X="4.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAEgBAAABAAAAAAAAACAAAAADEAgAAAAAAE=</HashCode>
+      <FileName>Engine\Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="EngineLibrary.EngineComponents.AxisOfInput" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAACAAAAAIAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Input.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

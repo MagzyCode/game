@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="GameLibrary.Effects.EffectFactories.DamageEffectFactory" Collapsed="true">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Factories\EffectFactories\DamageEffectFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Effects.EffectFactories.EffectFactory" Collapsed="true">
+    <Position X="2.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Factories\EffectFactories\EffectFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Maze.MazeElementsFactory" Collapsed="true">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAQAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\MazeFactories\MazeElementsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.AmmoPrizeFactory" Collapsed="true">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\PrizesFactories\AmmoPrizeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.PrizeFactory" Collapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\PrizesFactories\PrizeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.ReloadTimePrizeFactory" Collapsed="true">
+    <Position X="4.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\PrizesFactories\ReloadTimePrizeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.SpeedPrizeFactory" Collapsed="true">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\PrizesFactories\SpeedPrizeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.SpellPowerPrizeFactory" Collapsed="true">
+    <Position X="2.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\PrizesFactories\SpellPowerPrizeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Spells.SpellFactories.DamageSpellFactory" Collapsed="true">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Factories\SpellFactories\DamageSpellFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Spells.SpellFactories.SpellFactory" Collapsed="true">
+    <Position X="5.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Factories\SpellFactories\SpellFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.DecoratorProperty" Collapsed="true">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAACAAAEAAAAAIAAAAAQAABAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\DecoratorProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.PowerDecorator" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\PowerDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.ReloadTimeDecorator" Collapsed="true">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\ReloadTimeDecoratorcs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.SpeedDecorator" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\SpeedDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.PlayerProperitiesStandart" Collapsed="true">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAACAAAAAAAAAIAAAAAQAABAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Game\PlayerProperitiesStandart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.PlayerProperities" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQACAAAAAAAARIAAAAAQAABAAEBAAABAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Game\PlayerProperities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Effects.DamageEffect" Collapsed="true">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAEIAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>GameComponents\Effects\DamageEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Effects.Effect" Collapsed="true">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAACAAoQAAACAAAAAAEIAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>GameComponents\Effects\Effect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.GameEvents" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAAAAAAAAgAAAAAAAAgAABAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>GameComponents\Game\GameEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.Player" Collapsed="true">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAKAAAAEAAAAAAAAAAAMAEAACAAMEAQQAACQ=</HashCode>
+      <FileName>GameComponents\Game\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Game.PlayerConstructor" Collapsed="true">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAEAEAAAAAgAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Game\PlayerConstructor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Maze.BreakWall" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAIAAQAAAAAAAQAAA=</HashCode>
+      <FileName>GameComponents\Maze\BreakWall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Maze.HealthKit" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Maze\HealthKit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Maze.MazeScene" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAgAAIAQAAAAAAIAAAgADAEDAABEAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Maze\MazeScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Maze.PrizeSpawn" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQABIAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Maze\PrizeSpawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Maze.SpawnManager" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAgAAAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Maze\SpawnManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Monsters.Monster" Collapsed="true">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQACAAAAKAAAAMAAAAAAAABAAAAEAAAAB0EMAAAAAQ=</HashCode>
+      <FileName>GameComponents\Monsters\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Spells.DamageSpell" Collapsed="true">
+    <Position X="4" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Spells\DamageSpell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Spells.Spell" Collapsed="true">
+    <Position X="5.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAACAAACAAAAAAgAEAAASBAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Spells\Spell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Weapons.DamageWeapon" Collapsed="true">
+    <Position X="1.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Weapons\DamageWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLibrary.Weapons.Weapon" Collapsed="true">
+    <Position X="4.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAACAAggIgAAAAAAAAAEAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="GameLibrary.Game.PlayerControl" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACBAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Game\Player.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="GameLibrary.TypeProperty" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAACAAAAAAAAAIAAAAAAAABAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>GameComponents\Game\TypeProperty.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
