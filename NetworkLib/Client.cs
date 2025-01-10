@@ -56,8 +56,9 @@ namespace NetworkLib
             {
                 var data = new byte[0];// Encoding.Unicode.GetBytes(playerId);
                 socket.SendTo(data, remoteEndPoint);
-                ReceiveData();
+                var response = ReceiveData();
                 RunGameLogic();
+                Notify?.Invoke(response);
             }
             catch (Exception ex)
             {
@@ -65,7 +66,7 @@ namespace NetworkLib
             }
         }
 
-        public void ReceiveData()
+        public string ReceiveData()
         {
             try
             {
@@ -73,12 +74,15 @@ namespace NetworkLib
                 int bytes = socket.Receive(data);
                 string message = Encoding.Unicode.GetString(data, 0, bytes);
 
-                Notify?.Invoke(message);
+                return message;
+                
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+
+            return null;
         }
 
         private void RunGameLogic()
