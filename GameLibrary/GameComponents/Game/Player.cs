@@ -269,14 +269,14 @@ namespace GameLibrary.Game
 
             var isMyCharacter = (MazeScene.instance.PlayerId == "1" && gameObject.GameObjectTag.Equals("Blue Player")) || (MazeScene.instance.PlayerId == "2" && gameObject.GameObjectTag.Equals("Red Player"));
 
-            if (!isMyCharacter && MazeScene.instance.Client.EnemyCharacter.BulletCount != Property.Ammo)
-            {
-                // Property.Ammo = MazeScene.instance.Client.EnemyCharacter.BulletCount;
-            }
-            else
-            {
-                MazeScene.instance.Client.MyCharacter.BulletCount = Property.Ammo;
-            }
+            //if (!isMyCharacter && MazeScene.instance.Client.EnemyCharacter.BulletCount != Property.Ammo)
+            //{
+            //    // Property.Ammo = MazeScene.instance.Client.EnemyCharacter.BulletCount;
+            //}
+            //else
+            //{
+            //    MazeScene.instance.Client.MyCharacter.BulletCount = Property.Ammo;
+            //}
 
             GameEvents.ChangeCount?.Invoke(gameObject.GameObjectTag, Property.Ammo);
         }
