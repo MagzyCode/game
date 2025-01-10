@@ -5,6 +5,8 @@ namespace Network.Data
     [Serializable]
     public sealed class NetworkData
     {
+        public Guid Id { get; set; } = Guid.NewGuid();
+
         public int PlayerId { get; set; }
 
         public float[] PlayerPosition { get; set; } = new float[2];

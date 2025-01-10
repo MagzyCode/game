@@ -16,8 +16,6 @@ namespace NetworkLib
         bool appQuit;
         Socket socket;
         public NetworkData MyCharacter = new NetworkData();
-        
-
         public NetworkData EnemyCharacter = new NetworkData();
 
         public delegate void ReceiveHandler(string message);
@@ -57,7 +55,7 @@ namespace NetworkLib
                 var data = new byte[0];// Encoding.Unicode.GetBytes(playerId);
                 socket.SendTo(data, remoteEndPoint);
                 var response = ReceiveData();
-                RunGameLogic();
+                 RunGameLogic();
                 Notify?.Invoke(response);
             }
             catch (Exception ex)
