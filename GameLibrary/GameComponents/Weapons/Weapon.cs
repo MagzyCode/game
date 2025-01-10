@@ -60,6 +60,11 @@ namespace GameLibrary.Weapons
         {
             var isCurrentGameObjectCurrentCharacter = (maze.PlayerId == "1" && gameObject.ParentGameObject.GameObjectTag.Equals("Blue Player")) || (maze.PlayerId == "2" && gameObject.ParentGameObject.GameObjectTag.Equals("Red Player"));
 
+            if (playerScript != null && !isCurrentGameObjectCurrentCharacter)
+            {
+                GameEvents.ChangeCount?.Invoke(playerScript.gameObject.GameObjectTag, maze.Client.EnemyCharacter.BulletCount);
+            }
+
             if (playerScript != null && (playerScript.IsCanMove && Input.GetButtonDawn(playerScript.Control.ShootKey) && currentReloadTime < Time.CurrentTime && playerScript.Property.Ammo > 0 || (!isCurrentGameObjectCurrentCharacter && maze.Client.EnemyCharacter.IsPlayerShooting)))
             {
                 // Позиция создания заряда
@@ -93,7 +98,7 @@ namespace GameLibrary.Weapons
 
 
                 //if (isCurrentGameObjectCurrentCharacter)
-                //{
+                //{       
                 //    // Уменьшение количества патронов у игрока
                 //    playerScript.Property.SetProperty(TypeProperty.Ammo, playerScript.Property.Ammo - 1);
 
