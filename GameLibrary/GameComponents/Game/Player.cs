@@ -142,7 +142,7 @@ namespace GameLibrary.Game
             {
                 var isMyCharacter = (MazeScene.instance.PlayerId == "1" && gameObject.GameObjectTag.Equals("Blue Player")) || (MazeScene.instance.PlayerId == "2" && gameObject.GameObjectTag.Equals("Red Player"));
 
-                if (!isMyCharacter && Property.Health != MazeScene.instance.Client.EnemyCharacter.HealthCount)
+                if (!isMyCharacter)
                 {
                     Property.SetProperty(TypeProperty.Health, MazeScene.instance.Client.EnemyCharacter.HealthCount + value);
                 }
