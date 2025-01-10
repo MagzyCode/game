@@ -82,10 +82,11 @@ namespace GameLibrary.Weapons
                 // Создание заряда с указанной позицией, направлением и силой (если применимо)
                 SpawnSpell(spellSpawnPosition, spellDirection, playerScript.Property.Power);
 
-                if (!isCurrentGameObjectCurrentCharacter && maze.Client.EnemyCharacter.BulletCount != playerScript.Property.Ammo)
-                {
-                    playerScript.Property.Ammo = maze.Client.EnemyCharacter.BulletCount;
-                }
+
+                //if (!isCurrentGameObjectCurrentCharacter && maze.Client.EnemyCharacter.BulletCount != playerScript.Property.Ammo)
+                //{
+                //    playerScript.Property.Ammo = maze.Client.EnemyCharacter.BulletCount;
+                //}
 
                 playerScript.Property.SetProperty(TypeProperty.Ammo, playerScript.Property.Ammo - 1);
 
@@ -124,15 +125,15 @@ namespace GameLibrary.Weapons
 
                 if (playerScript != null && playerScript.Property.Ammo >= 0)
                 {
-                    if (isCurrentGameObjectCurrentCharacter)
-                    {
-                        maze.Client.MyCharacter.IsPlayerShooting = true;
-                        maze.Client.MyCharacter.BulletCount = playerScript.Property.Ammo;
-                    }
-                    else
-                    {
-                        maze.Client.EnemyCharacter.BulletCount = playerScript.Property.Ammo;
-                    }
+                    //if (isCurrentGameObjectCurrentCharacter)
+                    //{
+                    //    maze.Client.MyCharacter.IsPlayerShooting = true;
+                    //    maze.Client.MyCharacter.BulletCount = playerScript.Property.Ammo;
+                    //}
+                    //else
+                    //{
+                    //    maze.Client.EnemyCharacter.BulletCount = playerScript.Property.Ammo;
+                    //}
 
 
                     GameEvents.ChangeCount?.Invoke(playerScript.gameObject.GameObjectTag, playerScript.Property.Ammo);
