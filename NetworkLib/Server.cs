@@ -76,8 +76,8 @@ namespace NetworkLib
 
                 SendData(clients[0], "1");
                 SendData(clients[1], "2");
-                SendData(clients[0], "Connect");
-                SendData(clients[1], "Connect");
+                //SendData(clients[0], "Connect");
+                //SendData(clients[1], "Connect");
                 RunPlayLogic();
             }
             catch (Exception ex)

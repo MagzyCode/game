@@ -68,9 +68,10 @@ namespace GameApplication
 
         private void RunGame(string message)
         {
-            if (message.Equals("Connect"))
+            if (int.TryParse(message, out int _) && mazeScene != null)
             {
-                //MessageBox.Show($"Step 1 with {mazeScene.PlayerId}");
+                mazeScene.PlayerId = message;
+                mazeScene.Client.PlayerId = message;
 
                 mazeScene.Client.ClearNotify();
 
@@ -86,15 +87,6 @@ namespace GameApplication
 
                 application.SetScene(mazeScene);
                 application.Run();
-            }
-            else if (int.TryParse(message, out int _) && mazeScene != null)
-            {
-                mazeScene.PlayerId = message;
-                mazeScene.Client.PlayerId = message;
-            }
-            else
-            {
-                MessageBox.Show($"Message: {message}, PlayerId = {mazeScene?.PlayerId}, Client Id = {mazeScene?.Client?.PlayerId}");
             }
         }
 
