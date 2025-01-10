@@ -105,7 +105,7 @@ namespace NetworkLib
                     EnemyCharacter.PlayerPosition = new float[] { BitConverter.ToSingle(data, 0), BitConverter.ToSingle(data, 4) };
                     EnemyCharacter.BulletCount = BitConverter.ToInt32(data, 8);
                     EnemyCharacter.HealthCount = BitConverter.ToInt32(data, 12);
-                    EnemyCharacter.PlayerId = BitConverter.ToInt32(data, 16);
+                    EnemyCharacter.CoinCount = BitConverter.ToInt32(data, 16);
                     EnemyCharacter.IsPlayerSpriteFlip = BitConverter.ToBoolean(data, 20);
                     EnemyCharacter.IsPlayerShooting = BitConverter.ToBoolean(data, 21);
                 }
@@ -137,7 +137,7 @@ namespace NetworkLib
                            .Concat(BitConverter.GetBytes(MyCharacter.PlayerPosition[1]))
                            .Concat(BitConverter.GetBytes(MyCharacter.BulletCount))
                            .Concat(BitConverter.GetBytes(MyCharacter.HealthCount))
-                           .Concat(BitConverter.GetBytes(MyCharacter.PlayerId))
+                           .Concat(BitConverter.GetBytes(MyCharacter.CoinCount))
                            .Concat(BitConverter.GetBytes(MyCharacter.IsPlayerSpriteFlip))
                            .Concat(BitConverter.GetBytes(MyCharacter.IsPlayerShooting))
                            .ToArray();
