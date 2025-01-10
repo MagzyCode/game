@@ -66,16 +66,10 @@ namespace GameLibrary.Game
 
                 Control = new PlayerControl(AxisOfInput.Horizontal, AxisOfInput.Vertical, Key.Space, Key.E);
 
-                //if (MazeScene.instance.PlayerId == "1")
-                //{
-                //    MazeScene.instance.Client.MyCharacter.HealthCount = Property.Health;
-                //    MazeScene.instance.Client.MyCharacter.BulletCount = Property.Ammo;
-                //}
-                //else
-                //{
-                //    MazeScene.instance.Client.EnemyCharacter.HealthCount = Property.Health;
-                //    MazeScene.instance.Client.EnemyCharacter.BulletCount = Property.Ammo;
-                //}
+                if (MazeScene.instance.PlayerId == "2")
+                {
+                    GameEvents.ChangeHealth?.Invoke(gameObject.GameObjectTag, MazeScene.instance.Client.EnemyCharacter.HealthCount);
+                }
 
                 GameEvents.ChangeHealth?.Invoke(gameObject.GameObjectTag, Property.Health);
                 GameEvents.ChangeCoins?.Invoke(gameObject.GameObjectTag, BPCoins);
@@ -93,16 +87,11 @@ namespace GameLibrary.Game
 
                 Control = new PlayerControl(AxisOfInput.AlternativeHorizontal, AxisOfInput.AlternativeVertical, Key.RightShift, Key.RightControl);
 
-                //if (MazeScene.instance.PlayerId == "2")
-                //{
-                //    MazeScene.instance.Client.MyCharacter.HealthCount = Property.Health;
-                //    MazeScene.instance.Client.MyCharacter.BulletCount = Property.Ammo;
-                //}
-                //else
-                //{
-                //    MazeScene.instance.Client.EnemyCharacter.HealthCount = Property.Health;
-                //    MazeScene.instance.Client.EnemyCharacter.BulletCount = Property.Ammo;
-                //}
+
+                if (MazeScene.instance.PlayerId == "1")
+                {
+                    GameEvents.ChangeHealth?.Invoke(gameObject.GameObjectTag, MazeScene.instance.Client.EnemyCharacter.HealthCount);
+                }
 
                 GameEvents.ChangeHealth?.Invoke(gameObject.GameObjectTag, Property.Health);
                 GameEvents.ChangeCoins?.Invoke(gameObject.GameObjectTag, RPCoins);
@@ -132,7 +121,6 @@ namespace GameLibrary.Game
             {
                 Property.Health = MazeScene.instance.Client.EnemyCharacter.HealthCount;
                 Property.Ammo = MazeScene.instance.Client.EnemyCharacter.BulletCount;
-                // Property. = MazeScene.instance.Client.EnemyCharacter.BulletCount;
             }
 
             DetectEffect();
