@@ -56,8 +56,8 @@ namespace NetworkLib
             {
                 var data = new byte[0];// Encoding.Unicode.GetBytes(playerId);
                 socket.SendTo(data, remoteEndPoint);
-                ReceiveData();
                 RunGameLogic();
+                ReceiveData();
             }
             catch (Exception ex)
             {
