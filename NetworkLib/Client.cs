@@ -73,10 +73,7 @@ namespace NetworkLib
                 int bytes = socket.Receive(data);
                 string message = Encoding.Unicode.GetString(data, 0, bytes);
 
-                if (bytes == 22)
-                {
-                    Notify?.Invoke(message);
-                }
+                Notify?.Invoke(message);
             }
             catch (Exception ex)
             {
