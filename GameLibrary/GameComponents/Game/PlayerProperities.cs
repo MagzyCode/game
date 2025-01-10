@@ -17,7 +17,7 @@ namespace GameLibrary.Game
         /// <summary>
         /// Запас здоровья игрока
         /// </summary>
-        public abstract int Health { get; protected set; }
+        public abstract int Health { get; set; }
         /// <summary>
         /// Боезапас
         /// </summary>

@@ -128,6 +128,13 @@ namespace GameLibrary.Game
         /// </summary>
         public override void Update()
         {
+            if (!((MazeScene.instance.PlayerId == "1" && gameObject.ParentGameObject.GameObjectTag.Equals("Blue Player")) || (MazeScene.instance.PlayerId == "2" && gameObject.ParentGameObject.GameObjectTag.Equals("Red Player"))))
+            {
+                Property.Health = MazeScene.instance.Client.EnemyCharacter.HealthCount;
+                Property.Ammo = MazeScene.instance.Client.EnemyCharacter.BulletCount;
+                // Property. = MazeScene.instance.Client.EnemyCharacter.BulletCount;
+            }
+
             DetectEffect();
 
             if (gameObject.IsActive && IsCanMove)
@@ -266,17 +273,6 @@ namespace GameLibrary.Game
                 else
                     GameEvents.ChangeEffect?.Invoke(gameObject.GameObjectTag, " ");
             }
-
-            var isMyCharacter = (MazeScene.instance.PlayerId == "1" && gameObject.GameObjectTag.Equals("Blue Player")) || (MazeScene.instance.PlayerId == "2" && gameObject.GameObjectTag.Equals("Red Player"));
-
-            //if (!isMyCharacter && MazeScene.instance.Client.EnemyCharacter.BulletCount != Property.Ammo)
-            //{
-            //    // Property.Ammo = MazeScene.instance.Client.EnemyCharacter.BulletCount;
-            //}
-            //else
-            //{
-            //    MazeScene.instance.Client.MyCharacter.BulletCount = Property.Ammo;
-            //}
 
             GameEvents.ChangeCount?.Invoke(gameObject.GameObjectTag, Property.Ammo);
         }

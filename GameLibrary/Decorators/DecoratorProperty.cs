@@ -22,7 +22,7 @@ namespace GameLibrary.Game
         /// <summary>
         /// Запас здоровья игрока
         /// </summary>
-        public override int Health { get => playerProperities.Health; protected set => playerProperities.SetProperty( TypeProperty.Health,value); }
+        public override int Health { get => playerProperities.Health; set => playerProperities.SetProperty( TypeProperty.Health,value); }
         /// <summary>
         /// Боезапас
         /// </summary>
