@@ -128,7 +128,7 @@ namespace GameLibrary.Game
         /// </summary>
         public override void Update()
         {
-            if (!((MazeScene.instance.PlayerId == "1" && gameObject.ParentGameObject.GameObjectTag.Equals("Blue Player")) || (MazeScene.instance.PlayerId == "2" && gameObject.ParentGameObject.GameObjectTag.Equals("Red Player"))))
+            if (!((MazeScene.instance.PlayerId == "1" && gameObject.GameObjectTag.Equals("Blue Player")) || (MazeScene.instance.PlayerId == "2" && gameObject.GameObjectTag.Equals("Red Player"))))
             {
                 Property.Health = MazeScene.instance.Client.EnemyCharacter.HealthCount;
                 Property.Ammo = MazeScene.instance.Client.EnemyCharacter.BulletCount;
