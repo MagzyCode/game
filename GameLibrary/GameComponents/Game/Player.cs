@@ -312,7 +312,7 @@ namespace GameLibrary.Game
                     RPCoins += value;
                     MazeScene.instance.Client.MyCharacter.CoinCount = RPCoins;
                 }
-                else if (MazeScene.instance.Client.EnemyCharacter.CoinCount != RPCoins)
+                else if (MazeScene.instance.Client.EnemyCharacter.CoinCount != BPCoins)
                 {
                     BPCoins = MazeScene.instance.Client.EnemyCharacter.CoinCount;
                     BPCoins += value;
