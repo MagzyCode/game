@@ -19,9 +19,9 @@ namespace Network.Data
 
         public bool IsPlayerShooting { get; set; }
 
-        public int BulletCount { get; set; }
+        public int BulletCount { get; set; } = 10;
 
-        public int HealthCount { get; set; }
+        public int HealthCount { get; set; } = 10;
 
         public int CoinCount { get; set; }
     }

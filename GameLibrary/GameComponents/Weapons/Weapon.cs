@@ -74,11 +74,6 @@ namespace GameLibrary.Weapons
                 //    : new Vector2(maze.Client.EnemyCharacter.IsPlayerSpriteFlip ? -1 : 1, 0);
                 Vector2 spellDirection = new Vector2(gameObject.Sprite.IsFlipX ? -1 : 1, 0);
 
-                if (isCurrentGameObjectCurrentCharacter)
-                {
-                    maze.Client.MyCharacter.IsPlayerShooting = true;
-                }
-
                 // Создание заряда с указанной позицией, направлением и силой (если применимо)
                 SpawnSpell(spellSpawnPosition, spellDirection, playerScript.Property.Power);
 
@@ -134,7 +129,11 @@ namespace GameLibrary.Weapons
                     //{
                     //    maze.Client.EnemyCharacter.BulletCount = playerScript.Property.Ammo;
                     //}
-
+                    if (isCurrentGameObjectCurrentCharacter)
+                    {
+                        maze.Client.MyCharacter.IsPlayerShooting = true;
+                        maze.Client.MyCharacter.BulletCount = playerScript.Property.Ammo;
+                    }
 
                     GameEvents.ChangeCount?.Invoke(playerScript.gameObject.GameObjectTag, playerScript.Property.Ammo);
                 }
