@@ -12,7 +12,7 @@ namespace GameLibrary.Monsters
         /// <summary>
         /// Запас здоровья игрока
         /// </summary>
-        public int Health { get; private set; } = 2;
+        public int Health { get; private set; } = 1;
         /// <summary>
         /// Скорость игрока
         /// </summary>
