@@ -2,6 +2,9 @@
 
 namespace Network.Data
 {
+    /// <summary>
+    /// Данные, передаваемые по сети между игроками.
+    /// </summary>
     [Serializable]
     public sealed class NetworkData
     {
