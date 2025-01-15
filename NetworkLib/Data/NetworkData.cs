@@ -8,8 +8,6 @@ namespace Network.Data
     [Serializable]
     public sealed class NetworkData
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
-
         public float[] PlayerPosition { get; set; } = new float[2];
 
         /// <summary>
@@ -20,7 +18,7 @@ namespace Network.Data
 
         public bool IsPlayerShooting { get; set; }
 
-        public int BulletCount { get; set; } = 10;
+        public int SpellCount { get; set; } = 10;
 
         public int HealthCount { get; set; } = 10;
 

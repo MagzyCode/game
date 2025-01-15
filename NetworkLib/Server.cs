@@ -34,7 +34,7 @@ namespace NetworkLib
             }
         }
 
-        public void SendData(IPEndPoint client, string message)
+        public void Send(IPEndPoint client, string message)
         {
             try
             {
@@ -49,10 +49,10 @@ namespace NetworkLib
 
         public void RunServer()
         {
-            RunRecieve();
+            RunReceive();
         }
 
-        private void RunRecieve()
+        private void RunReceive()
         {
             Thread receiveThread = new Thread(new ThreadStart(ReceiveDataConnect));
             receiveThread.Start();
@@ -61,23 +61,19 @@ namespace NetworkLib
         public void ReceiveDataConnect()
         {
             clients = new List<IPEndPoint>();
-            //typeOfShips = new List<int>();
-            IPEndPoint remoteIp = null; // адрес входящего подключения
+            IPEndPoint remoteIp = null;
             try
             {
                 while (!appClose && clients.Count < 2)
                 {
                     byte[] data = server.Receive(ref remoteIp); // получаем данные
-                    // string message = Encoding.Unicode.GetString(data);
                     clients.Add(remoteIp);
                     Notify?.Invoke($"{remoteIp.Address}:{remoteIp.Port} - Ready to connect!");
                 }
                 Notify?.Invoke($"Play!");
 
-                SendData(clients[0], "1");
-                SendData(clients[1], "2");
-                //SendData(clients[0], "Connect");
-                //SendData(clients[1], "Connect");
+                Send(clients[0], "1");
+                Send(clients[1], "2");
                 RunPlayLogic();
             }
             catch (Exception ex)
@@ -88,13 +84,13 @@ namespace NetworkLib
 
         void RunPlayLogic()
         {
-            Thread receiveThread = new Thread(new ThreadStart(PlayLogicReceive));
+            Thread receiveThread = new Thread(new ThreadStart(ReceivePlayLogic));
             receiveThread.Start();
-            Thread sendThread = new Thread(new ThreadStart(PlayLogicSend));
+            Thread sendThread = new Thread(new ThreadStart(SendPlayLogic));
             sendThread.Start();
         }
 
-        void PlayLogicReceive()
+        void ReceivePlayLogic()
         {
             IPEndPoint remoteIp = null; // адрес входящего подключения
             try
@@ -124,7 +120,7 @@ namespace NetworkLib
             return Dns.GetHostByName(Host).AddressList.Select(x => x.ToString()).ToArray(); //.Where(x => x.ToString().StartsWith("192.168.0.")).LastOrDefault().ToString();
         }
 
-        void PlayLogicSend()
+        void SendPlayLogic()
         {
             IPEndPoint remoteIp = null; // адрес входящего подключения
             try
@@ -147,8 +143,7 @@ namespace NetworkLib
 
         public void Close()
         {
-            if (server != null)
-                server.Close();
+            server?.Close();
             appClose = true;
         }
 

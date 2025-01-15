@@ -31,7 +31,7 @@ namespace NetworkLib
                 IPEndPoint localIP = new IPEndPoint(IPAddress.Any, localPort);
                 socket.Bind(localIP);
                 Notify += receiveHandler;
-                RunConnect();
+                RunConnection();
             }
             catch (Exception ex)
             {
@@ -41,7 +41,7 @@ namespace NetworkLib
 
         public string PlayerId { get; set; }
 
-        public void RunConnect()
+        public void RunConnection()
         {
             Thread receiveThread = new Thread(new ThreadStart(Connect));
             receiveThread.Start();
@@ -55,7 +55,7 @@ namespace NetworkLib
                 var data = new byte[0];// Encoding.Unicode.GetBytes(playerId);
                 socket.SendTo(data, remoteEndPoint);
                 var response = ReceiveData();
-                 RunGameLogic();
+                RunGameLogic();
                 Notify?.Invoke(response);
             }
             catch (Exception ex)
@@ -85,13 +85,13 @@ namespace NetworkLib
 
         private void RunGameLogic()
         {
-            Thread receiveThread = new Thread(new ThreadStart(ShipDataRecieve));
+            Thread receiveThread = new Thread(new ThreadStart(PlayerDataRecieve));
             receiveThread.Start();
-            Thread sendThread = new Thread(new ThreadStart(ShipDataSend));
+            Thread sendThread = new Thread(new ThreadStart(PlayerDataSend));
             sendThread.Start();
         }
         
-        public void ShipDataRecieve()
+        public void PlayerDataRecieve()
         {
             IPEndPoint remoteIp = null; // адрес входящего подключения
 
@@ -103,7 +103,7 @@ namespace NetworkLib
                 if (bytes == 22) 
                 {
                     EnemyCharacter.PlayerPosition = new float[] { BitConverter.ToSingle(data, 0), BitConverter.ToSingle(data, 4) };
-                    EnemyCharacter.BulletCount = BitConverter.ToInt32(data, 8);
+                    EnemyCharacter.SpellCount = BitConverter.ToInt32(data, 8);
                     EnemyCharacter.HealthCount = BitConverter.ToInt32(data, 12);
                     EnemyCharacter.CoinCount = BitConverter.ToInt32(data, 16);
                     EnemyCharacter.IsPlayerSpriteFlip = BitConverter.ToBoolean(data, 20);
@@ -112,7 +112,7 @@ namespace NetworkLib
             }
         }
 
-        public void ShipDataSend()
+        public void PlayerDataSend()
         {
             try
             {
@@ -135,7 +135,7 @@ namespace NetworkLib
                     //}
                     byte[] data = BitConverter.GetBytes(MyCharacter.PlayerPosition[0])
                            .Concat(BitConverter.GetBytes(MyCharacter.PlayerPosition[1]))
-                           .Concat(BitConverter.GetBytes(MyCharacter.BulletCount))
+                           .Concat(BitConverter.GetBytes(MyCharacter.SpellCount))
                            .Concat(BitConverter.GetBytes(MyCharacter.HealthCount))
                            .Concat(BitConverter.GetBytes(MyCharacter.CoinCount))
                            .Concat(BitConverter.GetBytes(MyCharacter.IsPlayerSpriteFlip))
@@ -154,14 +154,13 @@ namespace NetworkLib
             }
         }
 
-        public void CloseClient()
+        public void CloseConnection()
         {
-            if (socket != null)
-                socket.Close();
+            socket?.Close();
             appQuit = true;
         }
 
-        public void ClearNotify()
+        public void ClearNotifyEvent()
         {
             Notify = null;
         }

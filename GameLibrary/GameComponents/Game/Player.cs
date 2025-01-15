@@ -122,7 +122,7 @@ namespace GameLibrary.Game
             if (!((MazeScene.instance.PlayerId == "1" && gameObject.GameObjectTag.Equals("Blue Player")) || (MazeScene.instance.PlayerId == "2" && gameObject.GameObjectTag.Equals("Red Player"))))
             {
                 Property.Health = MazeScene.instance.Client.EnemyCharacter.HealthCount;
-                Property.Ammo = MazeScene.instance.Client.EnemyCharacter.BulletCount;
+                Property.Ammo = MazeScene.instance.Client.EnemyCharacter.SpellCount;
             }
 
             DetectEffect();
@@ -171,12 +171,12 @@ namespace GameLibrary.Game
                 if (isMyCharacter)
                 {
                     MazeScene.instance.Client.MyCharacter.HealthCount = Property.Health;
-                    MazeScene.instance.Client.MyCharacter.BulletCount = Property.Ammo;
+                    MazeScene.instance.Client.MyCharacter.SpellCount = Property.Ammo;
                 }
                 else
                 {
                     MazeScene.instance.Client.EnemyCharacter.HealthCount = Property.Health;
-                    MazeScene.instance.Client.EnemyCharacter.BulletCount = Property.Ammo;
+                    MazeScene.instance.Client.EnemyCharacter.SpellCount = Property.Ammo;
                 }
 
                 GameEvents.ChangeHealth?.Invoke(gameObject.GameObjectTag, Property.Health);

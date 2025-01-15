@@ -62,7 +62,7 @@ namespace GameLibrary.Weapons
 
             if (playerScript != null && !isCurrentGameObjectCurrentCharacter)
             {
-                GameEvents.ChangeCount?.Invoke(playerScript.gameObject.GameObjectTag, maze.Client.EnemyCharacter.BulletCount);
+                GameEvents.ChangeCount?.Invoke(playerScript.gameObject.GameObjectTag, maze.Client.EnemyCharacter.SpellCount);
             }
 
             if (playerScript != null && (playerScript.IsCanMove && Input.GetButtonDawn(playerScript.Control.ShootKey) && currentReloadTime < Time.CurrentTime && playerScript.Property.Ammo > 0 || (!isCurrentGameObjectCurrentCharacter && maze.Client.EnemyCharacter.IsPlayerShooting)))
@@ -90,7 +90,7 @@ namespace GameLibrary.Weapons
 
 
 
-                playerScript.Property.SetProperty(TypeProperty.Ammo, (isCurrentGameObjectCurrentCharacter ? playerScript.Property.Ammo : maze.Client.EnemyCharacter.BulletCount) - 1);
+                playerScript.Property.SetProperty(TypeProperty.Ammo, (isCurrentGameObjectCurrentCharacter ? playerScript.Property.Ammo : maze.Client.EnemyCharacter.SpellCount) - 1);
 
                 // При быстрой перезарядке заряды не отнимаются
                 if (playerScript.Property.ReloadTime < 0.5f)
@@ -143,7 +143,7 @@ namespace GameLibrary.Weapons
                     //}
                     if (isCurrentGameObjectCurrentCharacter)
                     {
-                        maze.Client.MyCharacter.BulletCount = playerScript.Property.Ammo;
+                        maze.Client.MyCharacter.SpellCount = playerScript.Property.Ammo;
                     }
 
                     GameEvents.ChangeCount?.Invoke(playerScript.gameObject.GameObjectTag, playerScript.Property.Ammo);

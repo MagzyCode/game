@@ -73,7 +73,7 @@ namespace GameApplication
                 mazeScene.PlayerId = message;
                 mazeScene.Client.PlayerId = message;
 
-                mazeScene.Client.ClearNotify();
+                mazeScene.Client.ClearNotifyEvent();
 
                 ButtonPlay.IsEnabled = false;
 
