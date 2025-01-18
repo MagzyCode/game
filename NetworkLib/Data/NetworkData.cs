@@ -24,9 +24,9 @@ namespace Network.Data
 
         public int CoinCount { get; set; }
 
-        public float[] PrizeSpawnPosition { get; set; }
+        public float[] PrizeSpawnPosition { get; set; } = new float[2];
 
-        public int PrizeSpawnType { get; set; }
+        public int PrizeSpawnType { get; set; } = -1;
 
         public bool IsPlayerTryGetPrize { get; set; }
     }

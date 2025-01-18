@@ -103,11 +103,13 @@ namespace NetworkLib
                 if (bytes == 22) 
                 {
                     EnemyCharacter.PlayerPosition = new float[] { BitConverter.ToSingle(data, 0), BitConverter.ToSingle(data, 4) };
-                    EnemyCharacter.SpellCount = BitConverter.ToInt32(data, 8);
-                    EnemyCharacter.HealthCount = BitConverter.ToInt32(data, 12);
-                    EnemyCharacter.CoinCount = BitConverter.ToInt32(data, 16);
-                    EnemyCharacter.IsPlayerSpriteFlip = BitConverter.ToBoolean(data, 20);
-                    EnemyCharacter.IsPlayerShooting = BitConverter.ToBoolean(data, 21);
+                    EnemyCharacter.PrizeSpawnPosition = new float[] { BitConverter.ToSingle(data, 8), BitConverter.ToSingle(data, 12) };
+                    EnemyCharacter.PrizeSpawnType = BitConverter.ToInt32(data, 16);
+                    EnemyCharacter.SpellCount = BitConverter.ToInt32(data, 20);
+                    EnemyCharacter.HealthCount = BitConverter.ToInt32(data, 24);
+                    EnemyCharacter.CoinCount = BitConverter.ToInt32(data, 28);
+                    EnemyCharacter.IsPlayerSpriteFlip = BitConverter.ToBoolean(data, 32);
+                    EnemyCharacter.IsPlayerShooting = BitConverter.ToBoolean(data, 33);
                 }
             }
         }
@@ -120,6 +122,9 @@ namespace NetworkLib
                 {
                     byte[] data = BitConverter.GetBytes(MyCharacter.PlayerPosition[0])
                            .Concat(BitConverter.GetBytes(MyCharacter.PlayerPosition[1]))
+                           .Concat(BitConverter.GetBytes(MyCharacter.PrizeSpawnPosition[0]))
+                           .Concat(BitConverter.GetBytes(MyCharacter.PrizeSpawnPosition[1]))
+                           .Concat(BitConverter.GetBytes(MyCharacter.PrizeSpawnType))
                            .Concat(BitConverter.GetBytes(MyCharacter.SpellCount))
                            .Concat(BitConverter.GetBytes(MyCharacter.HealthCount))
                            .Concat(BitConverter.GetBytes(MyCharacter.CoinCount))
@@ -130,6 +135,8 @@ namespace NetworkLib
                     socket.SendTo(data, 0, data.Length, SocketFlags.None, remoteEndPoint);
 
                     MyCharacter.IsPlayerShooting = false;
+                    MyCharacter.PrizeSpawnPosition = new float[2];
+                    MyCharacter.PrizeSpawnType = -1;
                     Thread.Sleep(30);
                 }
             }
