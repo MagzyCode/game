@@ -102,12 +102,12 @@ namespace GameLibrary.Maze
 
                     if (color.R == 0 && color.G == 0 && color.B == 0)
                         gameObject = ElementsFactory.CreateMazeElement(new Vector2(j, i), "Wall");
-                    else if (color.R == 255 && color.G == 0 && color.B == 0)
-                        gameObject = ElementsFactory.CreateMazeElement(new Vector2(j, i), "BreakWall");
+                    //else if (color.R == 255 && color.G == 0 && color.B == 0)
+                    //    gameObject = ElementsFactory.CreateMazeElement(new Vector2(j, i), "BreakWall");
                     else if (color.R == 0 && color.G == 0 && color.B == 255)
                         gameObject = ElementsFactory.CreateMazeElement(new Vector2(j, i), "Stair");
-                    else if (color.R == 255 && color.G == 255 && color.B == 0)                 
-                        gameObject = ElementsFactory.CreateHealthKit(new Vector2(j, i));                 
+                    //else if (color.R == 255 && color.G == 255 && color.B == 0)                 
+                       //gameObject = ElementsFactory.CreateHealthKit(new Vector2(j, i));                 
                     else if (color.R == 0 && color.G == 255 && color.B == 255)
                     {
                         gameObject = ElementsFactory.CreateMonsters(new Vector2(j, i));

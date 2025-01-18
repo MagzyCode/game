@@ -1,5 +1,6 @@
 ﻿using EngineLibrary.EngineComponents;
 using EngineLibrary.ObjectComponents;
+using GameLibrary.Factories.PrizesFactories;
 using SharpDX;
 using System;
 
@@ -37,7 +38,7 @@ namespace GameLibrary.Maze
                     Random random = new Random();
 
                     // int chance = random.Next(0, 101);
-                    var prizeRandomizedOption = random.Next(0, 4);
+                    var prizeRandomizedOption = random.Next(0, 5);
                     //int chance = random.Next(0, 5);
 
                     if (maze.CountEmptyBlocks() == 0) return;
@@ -57,6 +58,9 @@ namespace GameLibrary.Maze
                             break;
                         case 3:
                             spawnFactory = new AmmoPrizeFactory();
+                            break;
+                        case 4:
+                            spawnFactory = new HealthKitFactory();
                             break;
                     }
 
@@ -80,6 +84,9 @@ namespace GameLibrary.Maze
                             break;
                         case 3:
                             spawnFactory = new AmmoPrizeFactory();
+                            break;
+                        case 4:
+                            spawnFactory = new HealthKitFactory();
                             break;
                     }
 

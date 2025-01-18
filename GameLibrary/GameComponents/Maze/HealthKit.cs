@@ -28,14 +28,14 @@ namespace GameLibrary.Maze
         /// </summary>
         public override void Update()
         {
-            if (gameObject.Collider.CheckIntersection(out Player player))
-            {
-                if (player.Property.Health < 10)
-                {
-                    player.ChangeStatsValue(1);
-                    maze.RemoveObjectFromScene(gameObject);
-                }
-            }
+            //if (gameObject.Collider.CheckIntersection(out Player player))
+            //{
+            //    if (player.Property.Health < 10)
+            //    {
+            //        player.ChangeStatsValue(1);
+            //        maze.RemoveObjectFromScene(gameObject);
+            //    }
+            //}
         }
     }
 }
