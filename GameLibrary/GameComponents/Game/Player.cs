@@ -123,7 +123,7 @@ namespace GameLibrary.Game
             {
                 GameEvents.ChangeHealth?.Invoke(gameObject.GameObjectTag, MazeScene.instance.Client.EnemyCharacter.HealthCount);
                 GameEvents.ChangeCount?.Invoke(gameObject.GameObjectTag, MazeScene.instance.Client.EnemyCharacter.SpellCount);
-                GameEvents.ChangeCoins?.Invoke(gameObject.GameObjectTag, MazeScene.instance.Client.EnemyCharacter.CoinCount);
+                //GameEvents.ChangeCoins?.Invoke(gameObject.GameObjectTag, MazeScene.instance.Client.EnemyCharacter.CoinCount);
                 //Property.Ammo = MazeScene.instance.Client.EnemyCharacter.SpellCount;
             }
 
