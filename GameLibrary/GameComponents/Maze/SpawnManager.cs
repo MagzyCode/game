@@ -32,31 +32,59 @@ namespace GameLibrary.Maze
         {
             if (currentTimeToSpawn < Time.CurrentTime)
             {
-                Random random = new Random();
-
-                int chance = random.Next(0, 101);
-
-                if (maze.CountEmptyBlocks() == 0) return;
-
-                Vector2 position = maze.GetRandomPosition();
-
-                if (chance < 20)
+                if (maze.PlayerId == "1")
                 {
-                    spawnFactory = new SpeedPrizeFactory();
-                }
-                else if (chance > 20 && chance <= 40)
-                {
-                    spawnFactory = new SpellPowerPrizeFactory();
-                }
-                else if (chance > 40 && chance <= 70)
-                {
-                    spawnFactory = new ReloadTimePrizeFactory();
-                }
-                else
-                    spawnFactory = new AmmoPrizeFactory();
+                    Random random = new Random();
 
+                    // int chance = random.Next(0, 101);
+                    var prizeRandomizedOption = random.Next(0, 4);
+                    int chance = random.Next(0, 5);
 
-                maze.AddObjectOnScene(spawnFactory.CreatePrize(position));
+                    if (maze.CountEmptyBlocks() == 0) return;
+
+                    Vector2 position = maze.GetRandomPosition();
+
+                    switch (prizeRandomizedOption)
+                    {
+                        case 0:
+                            spawnFactory = new SpeedPrizeFactory();
+                            break;
+                        case 1:
+                            spawnFactory = new SpellPowerPrizeFactory();
+                            break;
+                        case 2:
+                            spawnFactory = new ReloadTimePrizeFactory();
+                            break;
+                        case 3:
+                            spawnFactory = new AmmoPrizeFactory();
+                            break;
+                    }
+
+                    maze.Client.MyCharacter.PrizeSpawnPosition = position.ToArray();
+                    maze.Client.MyCharacter.PrizeSpawnType = prizeRandomizedOption;
+
+                    maze.AddObjectOnScene(spawnFactory.CreatePrize(position));
+                }
+                else if (maze.Client.EnemyCharacter.PrizeSpawnType >= 0 && maze.Client.EnemyCharacter.PrizeSpawnPosition != null)
+                {
+                    switch (maze.Client.EnemyCharacter.PrizeSpawnType)
+                    {
+                        case 0:
+                            spawnFactory = new SpeedPrizeFactory();
+                            break;
+                        case 1:
+                            spawnFactory = new SpellPowerPrizeFactory();
+                            break;
+                        case 2:
+                            spawnFactory = new ReloadTimePrizeFactory();
+                            break;
+                        case 3:
+                            spawnFactory = new AmmoPrizeFactory();
+                            break;
+                    }
+
+                    maze.AddObjectOnScene(spawnFactory.CreatePrize(new Vector2(maze.Client.EnemyCharacter.PrizeSpawnPosition)));
+                }
 
                 currentTimeToSpawn += timeToSpawn;
             }

@@ -37,7 +37,7 @@ namespace GameApplication
             GameEvents.ChangeCoins += ChangeCoins;
             GameEvents.ChangeHealth += ChangeHealth;
             GameEvents.EndGame += EndGame;
-            GameEvents.ChangeEffect += ChangeEffect;
+            //GameEvents.ChangeEffect += ChangeEffect;
             GameEvents.ChangeCount += ChangeCout;
         }
 
@@ -102,8 +102,8 @@ namespace GameApplication
             formhost.Visibility = Visibility.Hidden;
             string wizard;
 
-            BPEffectText.Text = "";
-            RPEffectText.Text = "";
+            //BPEffectText.Text = "";
+            //RPEffectText.Text = "";
 
             if (winPlayer == "Blue Player")
             {
@@ -158,38 +158,38 @@ namespace GameApplication
                 RedPlayerHealth.Text = value.ToString();
         }
 
-        private void ChangeEffect(string player, string effect)
-        {
-            TextBlock textBlock;
+        //private void ChangeEffect(string player, string effect)
+        //{
+        //    TextBlock textBlock;
 
-            if (player == "Blue Player")
-                textBlock = BPEffectText;
-            else if (player == "Red Player")
-                textBlock = RPEffectText;
-            else
-                textBlock = MonsterEffectText;
+        //    if (player == "Blue Player")
+        //        textBlock = BPEffectText;
+        //    else if (player == "Red Player")
+        //        textBlock = RPEffectText;
+        //    else
+        //        textBlock = MonsterEffectText;
 
-            switch (effect)
-            {
-                case "Death":
-                    textBlock.Foreground = new SolidColorBrush(Color.FromRgb(220, 220, 220));
-                    break;
-                case "Speed":
-                    textBlock.Foreground = new SolidColorBrush(Color.FromRgb(65, 105, 225));
-                    break;
-                case "Power":
-                    textBlock.Foreground = new SolidColorBrush(Color.FromRgb(255, 20, 147));
-                    break;
-                case "Reload":
-                    textBlock.Foreground = new SolidColorBrush(Color.FromRgb(0, 255, 0));
-                    break;
-                case " ":
-                    textBlock.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
-                    break;
-            }
+        //    switch (effect)
+        //    {
+        //        case "Death":
+        //            textBlock.Foreground = new SolidColorBrush(Color.FromRgb(220, 220, 220));
+        //            break;
+        //        case "Speed":
+        //            textBlock.Foreground = new SolidColorBrush(Color.FromRgb(65, 105, 225));
+        //            break;
+        //        case "Power":
+        //            textBlock.Foreground = new SolidColorBrush(Color.FromRgb(255, 20, 147));
+        //            break;
+        //        case "Reload":
+        //            textBlock.Foreground = new SolidColorBrush(Color.FromRgb(0, 255, 0));
+        //            break;
+        //        case " ":
+        //            textBlock.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+        //            break;
+        //    }
 
-            textBlock.Text = effect;
-        }
+        //    textBlock.Text = effect;
+        //}
 
         private void ChangeCout(string player, int count)
         {

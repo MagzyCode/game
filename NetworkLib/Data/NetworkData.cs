@@ -23,6 +23,12 @@ namespace Network.Data
         public int HealthCount { get; set; } = 10;
 
         public int CoinCount { get; set; }
+
+        public float[] PrizeSpawnPosition { get; set; }
+
+        public int PrizeSpawnType { get; set; }
+
+        public bool IsPlayerTryGetPrize { get; set; }
     }
 }
 

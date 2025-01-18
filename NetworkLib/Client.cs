@@ -118,21 +118,6 @@ namespace NetworkLib
             {
                 while (!appQuit)
                 {
-                    //if (MyCharacter.PlayerPosition[0] != 0.0f && MyCharacter.PlayerPosition[1] != 0.0f)
-                    //{
-                    //    byte[] data = BitConverter.GetBytes(MyCharacter.PlayerPosition[0])
-                    //       .Concat(BitConverter.GetBytes(MyCharacter.PlayerPosition[1]))
-                    //       .Concat(BitConverter.GetBytes(MyCharacter.BulletCount))
-                    //       .Concat(BitConverter.GetBytes(MyCharacter.HealthCount))
-                    //       .Concat(BitConverter.GetBytes(MyCharacter.PlayerId))
-                    //       .Concat(BitConverter.GetBytes(MyCharacter.IsPlayerSpriteFlip))
-                    //       .Concat(BitConverter.GetBytes(MyCharacter.IsPlayerShooting))
-                    //       .ToArray();
-
-                    //    socket.SendTo(data, 0, data.Length, SocketFlags.None, remoteEndPoint);
-
-                    //    MyCharacter.IsPlayerShooting = false;
-                    //}
                     byte[] data = BitConverter.GetBytes(MyCharacter.PlayerPosition[0])
                            .Concat(BitConverter.GetBytes(MyCharacter.PlayerPosition[1]))
                            .Concat(BitConverter.GetBytes(MyCharacter.SpellCount))

@@ -51,7 +51,7 @@ namespace GameLibrary.Maze
                 maze.RemoveObjectFromScene(gameObject);
             }
 
-            if(gameObject.Collider.CheckIntersection(out GameObject player,"Blue Player","Red Player"))
+            if (gameObject.Collider.CheckIntersection(out GameObject player,"Blue Player","Red Player"))
             {
                 if (player.GameObjectTag == "Blue Player" && Input.GetButtonDawn((player.Script as Player).Control.GetKey))
                 {

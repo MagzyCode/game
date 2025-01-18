@@ -47,7 +47,7 @@
             <ColumnDefinition Width="136"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="1" Cursor="Arrow" Name="grid">
+        <Grid Grid.Column="1" Cursor="Arrow" Name="grid" Visibility="Hidden">
             <Grid x:Name="HelpPanel" HorizontalAlignment="Center" Width="585,6">
                 <Image HorizontalAlignment="Left" Height="314" VerticalAlignment="Top" Width="528" Source="Images/Controls.png" IsHitTestVisible="False" StretchDirection="DownOnly" 
                        Stretch="UniformToFill" Visibility="Visible" Margin="2659,70,0,0"/>
@@ -70,7 +70,7 @@
         </Grid>
 
         <Grid Grid.Column="0">
-            <Grid x:Name="BluePlayerPanel" HorizontalAlignment="Center" Height="395" VerticalAlignment="Center" Width="121" Visibility="Hidden">
+            <Grid x:Name="BluePlayerPanel" HorizontalAlignment="Center" Height="395" VerticalAlignment="Center" Width="121" >
                 <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Blue Wizard" VerticalAlignment="Top" Foreground="DeepSkyBlue" FontFamily="Curlz MT" Width="104" Height="68" 
                            Margin="0,8,0,0" TextAlignment="Center" FontSize="24"/>
                 <Image HorizontalAlignment="Left" Height="20" Margin="9,83,0,0" VerticalAlignment="Top" Width="20" Source="Images/CoinIcon.png" IsHitTestVisible="False" Stretch="Fill" StretchDirection="DownOnly"/>
@@ -79,9 +79,9 @@
                 <Image HorizontalAlignment="Left" Height="20" Margin="62,83,0,0" VerticalAlignment="Top" Width="20" Source="Images/HealthIconBlue.png" IsHitTestVisible="False" Stretch="Fill" StretchDirection="DownOnly"/>
                 <TextBlock x:Name="BluePlayerHealth" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="DeepSkyBlue" FontFamily="Curlz MT" FontSize="20" Width="30" Height="21" 
                            Margin="87,81,0,0" RenderTransformOrigin="0.104,0.544"/>
-                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Effect" VerticalAlignment="Top" Foreground="DeepSkyBlue" FontFamily="Curlz MT" FontSize="20" Width="104" Height="35" 
+                <!--<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Effect" VerticalAlignment="Top" Foreground="DeepSkyBlue" FontFamily="Curlz MT" FontSize="20" Width="104" Height="35" 
                            Margin="0,197,0,0" TextAlignment="Center"/>
-                <TextBlock Name="BPEffectText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="White" FontFamily="Curlz MT" FontSize="22" Width="104" Height="30" TextAlignment="Center" RenderTransformOrigin="0.481,1.844" Margin="10,238,0,0"/>
+                <TextBlock Name="BPEffectText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="White" FontFamily="Curlz MT" FontSize="22" Width="104" Height="30" TextAlignment="Center" RenderTransformOrigin="0.481,1.844" Margin="10,238,0,0"/>-->
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Count Spell" VerticalAlignment="Top" Foreground="DeepSkyBlue" FontFamily="Curlz MT" FontSize="20" Width="104" Height="30" 
                            Margin="10,119,0,0" TextAlignment="Center" />
                 <TextBlock Name="BPCountSpells" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FF10AEFF" FontFamily="Curlz MT" FontSize="22" Width="104" Height="35" 
@@ -101,10 +101,10 @@
                 <Image HorizontalAlignment="Left" Height="20" Margin="65,76,0,0" VerticalAlignment="Top" Width="20" Source="Images/HealthIconRed.png" IsHitTestVisible="False" Stretch="Fill" StretchDirection="DownOnly" RenderTransformOrigin="0.34,0.596"/>
                 <TextBlock x:Name="RedPlayerHealth" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="#FFFF9B9B" FontFamily="Curlz MT" FontSize="20" Width="30" Height="21" 
                            Margin="90,73,0,0" RenderTransformOrigin="0.104,0.544"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Effect" VerticalAlignment="Top" Foreground="#FFFF9B9B" FontFamily="Curlz MT" FontSize="20" Width="104" Height="30" 
+                <!--<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Effect" VerticalAlignment="Top" Foreground="#FFFF9B9B" FontFamily="Curlz MT" FontSize="20" Width="104" Height="30" 
                            Margin="10,211,0,0" TextAlignment="Center" RenderTransformOrigin="0.503,-0.129" />
                 <TextBlock Name="RPEffectText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="White" FontFamily="Curlz MT" FontSize="20" Width="104" Height="30" 
-                    Margin="0,246,0,0" TextAlignment="Center"/>
+                    Margin="0,246,0,0" TextAlignment="Center"/>-->
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Count Spell" VerticalAlignment="Top" Foreground="#FFFF9B9B" FontFamily="Curlz MT" FontSize="20" Width="104" Height="34" 
                            Margin="10,118,0,0" TextAlignment="Center" />
                 <TextBlock Name="RPCountSpells" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFFF9B9B" FontFamily="Curlz MT" FontSize="22" Width="104" Height="35" 
