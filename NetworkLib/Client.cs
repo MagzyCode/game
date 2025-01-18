@@ -137,7 +137,7 @@ namespace NetworkLib
                     MyCharacter.IsPlayerShooting = false;
                     MyCharacter.PrizeSpawnPosition = new float[2];
                     MyCharacter.PrizeSpawnType = -1;
-                    Thread.Sleep(30);
+                    Thread.Sleep(5);
                 }
             }
             catch (Exception ex)
