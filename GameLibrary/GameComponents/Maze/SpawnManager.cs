@@ -32,7 +32,7 @@ namespace GameLibrary.Maze
         /// </summary>
         public override void Update()
         {
-            if (currentTimeToSpawn < Time.CurrentTime)
+            if (currentTimeToSpawn < Time.CurrentTime + 5f)
             {
                 if (maze.PlayerId == "1")
                 {
