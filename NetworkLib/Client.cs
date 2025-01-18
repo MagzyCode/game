@@ -110,6 +110,7 @@ namespace NetworkLib
                     EnemyCharacter.CoinCount = BitConverter.ToInt32(data, 28);
                     EnemyCharacter.IsPlayerSpriteFlip = BitConverter.ToBoolean(data, 32);
                     EnemyCharacter.IsPlayerShooting = BitConverter.ToBoolean(data, 33);
+                    EnemyCharacter.IsPlayerTryGetPrize = BitConverter.ToBoolean(data, 34);
                 }
             }
         }
@@ -130,6 +131,7 @@ namespace NetworkLib
                            .Concat(BitConverter.GetBytes(MyCharacter.CoinCount))
                            .Concat(BitConverter.GetBytes(MyCharacter.IsPlayerSpriteFlip))
                            .Concat(BitConverter.GetBytes(MyCharacter.IsPlayerShooting))
+                           .Concat(BitConverter.GetBytes(MyCharacter.IsPlayerTryGetPrize))
                            .ToArray();
 
                     socket.SendTo(data, 0, data.Length, SocketFlags.None, remoteEndPoint);
