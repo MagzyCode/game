@@ -86,7 +86,7 @@ namespace GameLibrary.Maze
                         case 3:
                             spawnFactory = new AmmoPrizeFactory();
                             break;
-                        case 4:
+                        default:
                             spawnFactory = new HealthKitFactory();
                             break;
                     }
