@@ -10,7 +10,7 @@ namespace GameLibrary.Maze
     /// </summary>
     public class SpawnManager : ObjectScript
     {
-        private const float timeToSpawn = 1f;
+        private const float timeToSpawn = 5f;
         private float currentTimeToSpawn;
 
         private MazeScene maze;
@@ -38,7 +38,7 @@ namespace GameLibrary.Maze
 
                     // int chance = random.Next(0, 101);
                     var prizeRandomizedOption = random.Next(0, 4);
-                    int chance = random.Next(0, 5);
+                    //int chance = random.Next(0, 5);
 
                     if (maze.CountEmptyBlocks() == 0) return;
 

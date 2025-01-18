@@ -53,7 +53,21 @@ namespace GameLibrary.Maze
 
             if (gameObject.Collider.CheckIntersection(out GameObject player,"Blue Player","Red Player"))
             {
-                if (player.GameObjectTag == "Blue Player" && Input.GetButtonDawn((player.Script as Player).Control.GetKey))
+                if ((player.GameObjectTag == "Blue Player" && maze.PlayerId == "1" && Input.GetButtonDawn((player.Script as Player).Control.GetKey))
+                    || (player.GameObjectTag == "Red Player" && maze.PlayerId == "2" && Input.GetButtonDawn((player.Script as Player).Control.GetKey)))
+                {
+                    maze.Client.MyCharacter.IsPlayerTryGetPrize = true;
+
+                    if (dropOutPrize == null)
+                        (player.Script as Player).Property.SetProperty(TypeProperty.Ammo, 10);
+                    else
+                        (player.Script as Player).SetProperty(dropOutPrize);
+
+                    maze.RemoveObjectFromScene(gameObject);
+                }
+                else if ((player.GameObjectTag == "Blue Player" && maze.PlayerId == "2")
+                    || (player.GameObjectTag == "Red Player" && maze.PlayerId == "1")
+                    && maze.Client.EnemyCharacter.IsPlayerTryGetPrize)
                 {
                     if (dropOutPrize == null)
                         (player.Script as Player).Property.SetProperty(TypeProperty.Ammo, 10);
@@ -62,15 +76,24 @@ namespace GameLibrary.Maze
 
                     maze.RemoveObjectFromScene(gameObject);
                 }
-                else if (player.GameObjectTag == "Red Player" && Input.GetButtonDawn((player.Script as Player).Control.GetKey))
-                {
-                    if (dropOutPrize == null)
-                        (player.Script as Player).Property.SetProperty(TypeProperty.Ammo, 10);
-                    else
-                        (player.Script as Player).SetProperty(dropOutPrize);
+                //if (player.GameObjectTag == "Blue Player" && Input.GetButtonDawn((player.Script as Player).Control.GetKey))
+                //{
+                //    if (dropOutPrize == null)
+                //        (player.Script as Player).Property.SetProperty(TypeProperty.Ammo, 10);
+                //    else
+                //        (player.Script as Player).SetProperty(dropOutPrize);
 
-                    maze.RemoveObjectFromScene(gameObject);
-                }
+                //    maze.RemoveObjectFromScene(gameObject);
+                //}
+                //else if (player.GameObjectTag == "Red Player" && Input.GetButtonDawn((player.Script as Player).Control.GetKey))
+                //{
+                //    if (dropOutPrize == null)
+                //        (player.Script as Player).Property.SetProperty(TypeProperty.Ammo, 10);
+                //    else
+                //        (player.Script as Player).SetProperty(dropOutPrize);
+
+                //    maze.RemoveObjectFromScene(gameObject);
+                //}
             }
         }
     }

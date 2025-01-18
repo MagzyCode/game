@@ -22,7 +22,7 @@ namespace GameLibrary
             gameObject.GameObjectTag = "Spawn";
 
             PrizeSpawn speedPrize = new PrizeSpawn();
-            speedPrize.InitializeWeaponSpawn(new SpeedDecorator(new PlayerProperitiesStandart()), 5f);
+            speedPrize.InitializeWeaponSpawn(new SpeedDecorator(new PlayerProperitiesStandart()), 50f);
 
             gameObject.InitializeObjectScript(speedPrize);
 

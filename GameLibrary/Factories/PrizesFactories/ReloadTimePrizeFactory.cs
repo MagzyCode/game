@@ -27,7 +27,7 @@ namespace GameLibrary
             gameObject.GameObjectTag = "Spawn";
 
             PrizeSpawn speedPrize = new PrizeSpawn();
-            speedPrize.InitializeWeaponSpawn(new ReloadTimeDecorator(new PlayerProperitiesStandart()), 5f);
+            speedPrize.InitializeWeaponSpawn(new ReloadTimeDecorator(new PlayerProperitiesStandart()), 50f);
 
             gameObject.InitializeObjectScript(speedPrize);
 
