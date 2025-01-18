@@ -14,7 +14,7 @@ namespace GameLibrary.Decorators
             timeDeactivate = 10;
         }
 
-        public override int Health { get => playerProperities.Health + 5; }
+        public override int Health { get => 10; }
 
         protected override void DeactivateProperities()
         {
