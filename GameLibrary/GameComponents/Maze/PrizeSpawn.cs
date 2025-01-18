@@ -65,9 +65,8 @@ namespace GameLibrary.Maze
 
                     maze.RemoveObjectFromScene(gameObject);
                 }
-                else if (((player.GameObjectTag == "Blue Player" && maze.PlayerId == "2")
-                    || (player.GameObjectTag == "Red Player" && maze.PlayerId == "1"))
-                    && maze.Client.EnemyCharacter.IsPlayerTryGetPrize)
+                else if (maze.Client.EnemyCharacter.IsPlayerTryGetPrize && ((player.GameObjectTag == "Blue Player" && maze.PlayerId == "2")
+                    || (player.GameObjectTag == "Red Player" && maze.PlayerId == "1")))
                 {
                     if (dropOutPrize == null)
                         (player.Script as Player).Property.SetProperty(TypeProperty.Ammo, 10);
