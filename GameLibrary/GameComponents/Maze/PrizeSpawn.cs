@@ -68,6 +68,8 @@ namespace GameLibrary.Maze
                     else
                         (player.Script as Player).SetProperty(dropOutPrize);
 
+                    GameEvents.ChangeHealth?.Invoke(player.GameObjectTag, (player.Script as Player).Property.Health);
+
                     maze.RemoveObjectFromScene(gameObject);
                 }
                 else if (enemyPrizeCaptured && ((player.GameObjectTag == "Blue Player" && maze.PlayerId == "2")
