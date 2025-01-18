@@ -138,8 +138,8 @@ namespace NetworkLib
 
                     MyCharacter.IsPlayerTryGetPrize = false;
                     MyCharacter.IsPlayerShooting = false;
-                    MyCharacter.PrizeSpawnPosition = new float[2];
-                    MyCharacter.PrizeSpawnType = -1;
+                    //MyCharacter.PrizeSpawnPosition = new float[2];
+                    //MyCharacter.PrizeSpawnType = -1;
                     Thread.Sleep(30);
                 }
             }
