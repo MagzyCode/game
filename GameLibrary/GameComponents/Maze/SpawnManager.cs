@@ -39,7 +39,7 @@ namespace GameLibrary.Maze
                     Random random = new Random();
 
                     // int chance = random.Next(0, 101);
-                    var prizeRandomizedOption = random.Next(0, 5);
+                    var prizeRandomizedOption = random.Next(0, 106);
                     //int chance = random.Next(0, 5);
 
                     if (maze.CountEmptyBlocks() == 0) return;
@@ -60,7 +60,7 @@ namespace GameLibrary.Maze
                         case 3:
                             spawnFactory = new AmmoPrizeFactory();
                             break;
-                        case 4:
+                        default:
                             spawnFactory = new HealthKitFactory();
                             break;
                     }
