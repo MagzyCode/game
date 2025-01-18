@@ -14,7 +14,7 @@ namespace GameLibrary.Game
         /// <summary>
         /// Запас здоровья игрока
         /// </summary>
-        public override int Health { get; set; } = 10;
+        public override int Health { get; set; }
         /// <summary>
         /// Боезапас
         /// </summary>
