@@ -53,13 +53,13 @@ namespace GameLibrary.Effects
                         (playerGameObject.Script as Player).ChangeStatsValue(-power, "Death");
 
                     
-                    if (Player.RPCoins < 0)
-                        Player.SetCoins("Red Player", 10);
-                    else if (Player.BPCoins < 0)
-                        Player.SetCoins("Blue Player", 10);
+                    //if (Player.RPCoins < 0)
+                    //    Player.SetCoins("Red Player", 10);
+                    //else if (Player.BPCoins < 0)
+                    //    Player.SetCoins("Blue Player", 10);
 
                     // Вызов события изменения эффекта на сцене
-                    GameEvents.ChangeEffect?.Invoke(playerGameObject.GameObjectTag, "Death");
+                    //GameEvents.ChangeEffect?.Invoke(playerGameObject.GameObjectTag, "Death");
                 }
             }
 
@@ -83,7 +83,7 @@ namespace GameLibrary.Effects
                         Player.SetCoins(tag, 10);
 
                     // Вызов события изменения эффекта на сцене
-                    GameEvents.ChangeEffect?.Invoke(playerGameObject.GameObjectTag, "Death");
+                    //GameEvents.ChangeEffect?.Invoke(playerGameObject.GameObjectTag, "Death");
                 }
             }
         }
