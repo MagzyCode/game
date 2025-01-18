@@ -46,7 +46,7 @@ namespace GameLibrary.Maze
         /// </summary>
         public override void Update()
         {
-            if(cuurentTimeToDisappear < (Time.CurrentTime + 5f))
+            if(cuurentTimeToDisappear < Time.CurrentTime)
             {
                 maze.RemoveObjectFromScene(gameObject);
             }
