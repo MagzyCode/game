@@ -68,6 +68,7 @@ namespace GameLibrary.Maze
                     else
                         (player.Script as Player).SetProperty(dropOutPrize);
 
+                    maze.Client.MyCharacter.HealthCount = (player.Script as Player).Property.Health;
                     GameEvents.ChangeHealth?.Invoke(player.GameObjectTag, (player.Script as Player).Property.Health);
 
                     maze.RemoveObjectFromScene(gameObject);
