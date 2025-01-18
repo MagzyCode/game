@@ -100,7 +100,7 @@ namespace NetworkLib
                 byte[] data = new byte[1024 * 8]; // получаем данные
                 int bytes = socket.Receive(data); // получаем данные
                  
-                if (bytes == 22) 
+                if (bytes > 30) 
                 {
                     EnemyCharacter.PlayerPosition = new float[] { BitConverter.ToSingle(data, 0), BitConverter.ToSingle(data, 4) };
                     EnemyCharacter.PrizeSpawnPosition = new float[] { BitConverter.ToSingle(data, 8), BitConverter.ToSingle(data, 12) };
