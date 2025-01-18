@@ -1,5 +1,7 @@
 ﻿using EngineLibrary.EngineComponents;
 using EngineLibrary.ObjectComponents;
+using GameLibrary.Decorators;
+using GameLibrary.Game;
 using GameLibrary.Maze;
 using SharpDX;
 using System;
@@ -21,7 +23,10 @@ namespace GameLibrary.Factories.PrizesFactories
 
             gameObject.GameObjectTag = "HealthKit";
 
-            gameObject.InitializeObjectScript(new HealthKit());
+            PrizeSpawn speedPrize = new PrizeSpawn();
+            speedPrize.InitializeWeaponSpawn(new HealthDecorator(new PlayerProperitiesStandart()), 50f);
+
+            gameObject.InitializeObjectScript(speedPrize);
 
             return gameObject;
         }
