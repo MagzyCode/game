@@ -61,7 +61,10 @@ namespace GameLibrary.Maze
                     maze.Client.MyCharacter.IsPlayerTryGetPrize = true;
 
                     if (dropOutPrize == null)
+                    {
                         (player.Script as Player).Property.SetProperty(TypeProperty.Ammo, 10);
+                        maze.Client.MyCharacter.SpellCount = 10;
+                    }
                     else
                         (player.Script as Player).SetProperty(dropOutPrize);
 
