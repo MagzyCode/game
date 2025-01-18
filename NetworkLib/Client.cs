@@ -134,6 +134,7 @@ namespace NetworkLib
 
                     socket.SendTo(data, 0, data.Length, SocketFlags.None, remoteEndPoint);
 
+                    MyCharacter.IsPlayerTryGetPrize = false;
                     MyCharacter.IsPlayerShooting = false;
                     MyCharacter.PrizeSpawnPosition = new float[2];
                     MyCharacter.PrizeSpawnType = -1;
