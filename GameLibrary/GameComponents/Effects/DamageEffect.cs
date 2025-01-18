@@ -39,12 +39,12 @@ namespace GameLibrary.Effects
                     playerGameObject.IsActive = false;
 
                     // Обработка смерти игрока и вычет очков (RPCoins или BPCoins)
-                    if (playerGameObject.GameObjectTag == "Red Player" && Player.RPCoins > 0)
+                    if (playerGameObject.GameObjectTag == "Red Player" /*&& Player.RPCoins > 0*/)
                     {
                         (playerGameObject.Script as Player).ChangeStatsValue((Player.RPCoins), "Death");
                         Player.SetCoins("Red Player", -10);
                     }
-                    else if (playerGameObject.GameObjectTag == "Blue Player" && Player.BPCoins > 0)
+                    else if (playerGameObject.GameObjectTag == "Blue Player" /*&& Player.BPCoins > 0*/)
                     {
                         (playerGameObject.Script as Player).ChangeStatsValue((Player.BPCoins), "Death");
                         Player.SetCoins("Blue Player", -10);
