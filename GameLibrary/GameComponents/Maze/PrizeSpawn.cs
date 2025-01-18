@@ -53,6 +53,8 @@ namespace GameLibrary.Maze
 
             if (gameObject.Collider.CheckIntersection(out GameObject player,"Blue Player","Red Player"))
             {
+                var enemyPrizeCaptured = maze.Client.EnemyCharacter.IsPlayerTryGetPrize;
+
                 if ((player.GameObjectTag == "Blue Player" && maze.PlayerId == "1" && Input.GetButtonDawn((player.Script as Player).Control.GetKey))
                     || (player.GameObjectTag == "Red Player" && maze.PlayerId == "2" && Input.GetButtonDawn((player.Script as Player).Control.GetKey)))
                 {
@@ -65,7 +67,7 @@ namespace GameLibrary.Maze
 
                     maze.RemoveObjectFromScene(gameObject);
                 }
-                else if (maze.Client.EnemyCharacter.IsPlayerTryGetPrize && ((player.GameObjectTag == "Blue Player" && maze.PlayerId == "2")
+                else if (enemyPrizeCaptured && ((player.GameObjectTag == "Blue Player" && maze.PlayerId == "2")
                     || (player.GameObjectTag == "Red Player" && maze.PlayerId == "1")))
                 {
                     if (dropOutPrize == null)
