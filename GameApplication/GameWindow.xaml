@@ -47,7 +47,7 @@
             <ColumnDefinition Width="136"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="1" Cursor="Arrow" Name="grid" Visibility="Hidden">
+        <Grid Grid.Column="1" Cursor="Arrow" Name="grid">
             <Grid x:Name="HelpPanel" HorizontalAlignment="Center" Width="585,6">
                 <Image HorizontalAlignment="Left" Height="314" VerticalAlignment="Top" Width="528" Source="Images/Controls.png" IsHitTestVisible="False" StretchDirection="DownOnly" 
                        Stretch="UniformToFill" Visibility="Visible" Margin="2659,70,0,0"/>
@@ -70,7 +70,7 @@
         </Grid>
 
         <Grid Grid.Column="0">
-            <Grid x:Name="BluePlayerPanel" HorizontalAlignment="Center" Height="395" VerticalAlignment="Center" Width="121" >
+            <Grid x:Name="BluePlayerPanel" HorizontalAlignment="Center" Height="395" VerticalAlignment="Center" Width="121" Visibility="Hidden">
                 <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Blue Wizard" VerticalAlignment="Top" Foreground="DeepSkyBlue" FontFamily="Curlz MT" Width="104" Height="68" 
                            Margin="0,8,0,0" TextAlignment="Center" FontSize="24"/>
                 <Image HorizontalAlignment="Left" Height="20" Margin="9,83,0,0" VerticalAlignment="Top" Width="20" Source="Images/CoinIcon.png" IsHitTestVisible="False" Stretch="Fill" StretchDirection="DownOnly"/>
