@@ -88,7 +88,7 @@ namespace GameLibrary.Maze
         {
             Random random = new Random();
 
-            string text = "Resources/Mazes/Maze " + 1 + ".bmp";
+            string text = "Resources/Mazes/Maze " + 4 + ".bmp";
 
             Bitmap bitmap = new Bitmap(text);
 
